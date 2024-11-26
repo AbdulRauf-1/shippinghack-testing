@@ -15,7 +15,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 18
       - name: Install project dependencies
         run: npm install
       - name: Build React project
@@ -26,14 +26,15 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y lftp
       - name: Deploy to Shared Hosting using FTP
         env:
-          FTP_USERNAME: ${{ secrets.STAGE_FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.STAGE_FTP_PASSWORD }}
-          FTP_HOST: ${{ secrets.STAGE_FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ${{ secrets.FTP_HOST }}
         run: |
           cd dist # Adjust this if your build output directory is different
           lftp -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R -e -x .git/ ./"
       - name: Clean up
         run: echo "Clean up step"
+
   deploy_main:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -52,7 +53,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 18
       - name: Install project dependencies
         run: npm install
       - name: Build React project
@@ -63,9 +64,9 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y lftp
       - name: Deploy to Shared Hosting using FTP
         env:
-          FTP_USERNAME: ${{ secrets.WEB_FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.WEB_FTP_PASSWORD }}
-          FTP_HOST: ${{ secrets.WEB_FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ${{ secrets.FTP_HOST }}
         run: |
           cd dist # Adjust this if your build output directory is different
           lftp -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R -e -x .git/ ./"
