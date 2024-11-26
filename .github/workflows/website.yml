@@ -1,10 +1,12 @@
 name: Deploy to Shared Hosting
+
 on:
   push:
     branches:
       - testing
       - main
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering from GitHub Actions UI
+
 jobs:
   deploy_testing:
     if: github.ref == 'refs/heads/testing'
@@ -36,7 +38,6 @@ jobs:
         run: echo "Clean up step"
 
   deploy_main:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -44,9 +45,8 @@ jobs:
       - name: Check deployment flag
         id: check-flag
         run: |
-          DEPLOY_FLAG="no" # Set the flag here. Change to "yes" to enable deployment.
-          echo "Deployment flag is set to: $DEPLOY_FLAG"
-          if [ "$DEPLOY_FLAG" != "yes" ]; then
+          echo "DEPLOY_FLAG=${{ secrets.DEPLOY_FLAG }}"
+          if [ "${{ secrets.DEPLOY_FLAG }}" != "yes" ]; then
             echo "Deployment flag is not set to 'yes'. Skipping deployment."
             exit 0
           fi
