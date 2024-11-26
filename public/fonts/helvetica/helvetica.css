@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Helvetica Rounded LT Std';
+    src: url('HelveticaRoundedLTStd-BlkO.eot');
+    src: local('Helvetica Rounded LT Std Black Oblique'), local('HelveticaRoundedLTStd-BlkO'),
+        url('HelveticaRoundedLTStd-BlkO.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaRoundedLTStd-BlkO.woff2') format('woff2'),
+        url('HelveticaRoundedLTStd-BlkO.woff') format('woff'),
+        url('HelveticaRoundedLTStd-BlkO.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Rounded LT Std';
+    src: url('HelveticaRoundedLTStd-Black.eot');
+    src: local('Helvetica Rounded LT Std Black'), local('HelveticaRoundedLTStd-Black'),
+        url('HelveticaRoundedLTStd-Black.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaRoundedLTStd-Black.woff2') format('woff2'),
+        url('HelveticaRoundedLTStd-Black.woff') format('woff'),
+        url('HelveticaRoundedLTStd-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Rounded LT Std';
+    src: url('HelveticaRoundedLTStd-BdCn.eot');
+    src: local('Helvetica Rounded LT Std Bold Condensed'), local('HelveticaRoundedLTStd-BdCn'),
+        url('HelveticaRoundedLTStd-BdCn.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaRoundedLTStd-BdCn.woff2') format('woff2'),
+        url('HelveticaRoundedLTStd-BdCn.woff') format('woff'),
+        url('HelveticaRoundedLTStd-BdCn.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Rounded LT Std';
+    src: url('HelveticaRoundedLTStd-BdCnO.eot');
+    src: local('Helvetica Rounded LT Std Bold Condensed Oblique'), local('HelveticaRoundedLTStd-BdCnO'),
+        url('HelveticaRoundedLTStd-BdCnO.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaRoundedLTStd-BdCnO.woff2') format('woff2'),
+        url('HelveticaRoundedLTStd-BdCnO.woff') format('woff'),
+        url('HelveticaRoundedLTStd-BdCnO.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Rounded LT Std';
+    src: url('HelveticaRoundedLTStd-BdO.eot');
+    src: local('Helvetica Rounded LT Std Bold Oblique'), local('HelveticaRoundedLTStd-BdO'),
+        url('HelveticaRoundedLTStd-BdO.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaRoundedLTStd-BdO.woff2') format('woff2'),
+        url('HelveticaRoundedLTStd-BdO.woff') format('woff'),
+        url('HelveticaRoundedLTStd-BdO.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Rounded LT Std';
+    src: url('HelveticaRoundedLTStd-Bd.eot');
+    src: local('Helvetica Rounded LT Std Bold'), local('HelveticaRoundedLTStd-Bd'),
+        url('HelveticaRoundedLTStd-Bd.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaRoundedLTStd-Bd.woff2') format('woff2'),
+        url('HelveticaRoundedLTStd-Bd.woff') format('woff'),
+        url('HelveticaRoundedLTStd-Bd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

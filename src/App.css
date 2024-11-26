@@ -1,0 +1,76 @@
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+.css-13cymwt-control,
+.css-t3ipsp-control {
+  background: #f6f6f6 !important;
+  padding: 3px 8px !important;
+  border-color: #dddddd !important;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 30%;
+}
+
+.css-13cymwt-control::placeholder {
+  opacity: 0.6;
+}
+
+.inner .css-13cymwt-control,
+.inner .css-t3ipsp-control {
+  background: transparent !important;
+  border: none !important;
+  padding: 5px 8px !important;
+}
+
+.css-1cqh9jq1 {
+  font-weight: 400;
+}
+
+.p-slider-handle,
+.p-slider-range {
+  color: #00538c !important;
+}
+.p-slider-handle {
+  border: 1px solid #00538c !important;
+}
+
+.react-tel-input {
+  width: auto !important;
+}
+
+/* .custom-gradient-bg {
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0.4) 0%,
+    rgba(255, 255, 255, 0.6) 50%
+  );
+} */
+
+.setting {
+  animation-name: settings;
+  animation-duration: 200ms;
+  /* border: 4px solid cyan; */
+}
+
+@keyframes settings {
+  0% {
+    height: 0px;
+    overflow: hidden;
+  }
+  100% {
+    height: 196px;
+    overflow: hidden;
+  }
+}
+
+.scroll-container {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
